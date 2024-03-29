@@ -22,7 +22,7 @@ def check_winner(p1, p2):
             winner = 1
         elif p2 == 'r':
             winner = 2
-        elif p2 == 's':
+        elif p2 == 's':     
             print('Draw!')
         else:
             print('Oops! Try one of (r, p, s)')
