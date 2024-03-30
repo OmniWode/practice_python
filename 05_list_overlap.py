@@ -6,6 +6,7 @@ c = []
 
 for item in a:
     if item in b:
-        c.append(item)
+        if item not in c:
+            c.append(item)
 
 print("the shared elements are: ", c)
