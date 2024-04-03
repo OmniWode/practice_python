@@ -1,20 +1,16 @@
 #13_fibonacci.py
 
-def fib(n):
-    if n == 1 or n == 2:
-        return 1
-    else:
-        num = fib(n - 1) + fib(n - 2)
-        return num
+def fib(num):
+    fib = []
 
-def make_list(count):
-    fib_list = []
+    for n in range(num):
+        if n == 0 or n == 1:
+            fib.append(1)
+        else:
+            fib.append(fib[n-1] + fib[n-2])
 
-    for a in range(count):
-        fib_list.append(fib(a+1))
+    return fib
 
-    return fib_list    
-
-n = int(input('How many Fibonacci numbers would you like to generate? '))
-fib_list = make_list(n)
-print(fib_list)
+num = int(input('How many Fibonacci numbers would you like to generate? '))
+fib = fib(num)
+print(fib)
