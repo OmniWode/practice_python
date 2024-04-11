@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 
-url = 'https://nytimes.com'
+url = 'https://www.nytimes.com'
 r = requests.get(url)
 r_html = r.text
 
