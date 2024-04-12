@@ -23,7 +23,7 @@ def check_cows(guess, goal):
 	cows = 0
 
 	for i in range(4):
-		if guess[i] == goal[i]:
+		if guess[i] in goal:
 			cows += 1
 
 	return cows
@@ -32,7 +32,7 @@ def check_bulls(guess, goal):
 	bulls = 0
 
 	for i in range(4):
-		if guess[i] in goal:
+		if guess[i] == goal[i]:
 			bulls += 1
 
 	return bulls
@@ -51,5 +51,5 @@ if __name__=="__main__":
 		guess = input('Enter a number:\n>>> ')
 		correct_guess = make_guess(guess, goal)
 		guess_count += 1
-		
+
 	print('Well done! It took you',guess_count,'guesses to find the number')
