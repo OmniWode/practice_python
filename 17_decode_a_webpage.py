@@ -4,12 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 
 
-url = 'https://www.nytimes.com'
+url = 'http://www.nytimes.com'
 r = requests.get(url)
-r_html = r.text
 
 
-soup = BeautifulSoup(r_html)
+soup = BeautifulSoup(r.text,features="html.parser")
 
 for story_heading in soup.find_all(class_='story-heading'):
 	if story_heading.a:
